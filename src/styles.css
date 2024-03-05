@@ -1,0 +1,45 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+  
+.card {
+    margin-bottom: 20px;
+}
+  
+.card-body {
+    text-align: center;
+}
+  
+.cart-container {
+    margin-top: 20px;
+}
+  
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.cart-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+  
+.cart-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+  
+.cart-item-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.cart-item-remove {
+    cursor: pointer;
+    color: red;
+}

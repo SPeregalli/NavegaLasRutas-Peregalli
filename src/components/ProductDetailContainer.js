@@ -1,4 +1,3 @@
-// En components/ProductDetailContainer.js
 import React, { useState, useEffect } from 'react';
 
 function ProductDetailContainer({ match }) {
@@ -6,17 +5,16 @@ function ProductDetailContainer({ match }) {
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
-    // Simular una llamada a una API o una operación asincrónica para obtener los detalles del producto
-    // Aquí puedes hacer la llamada a tu API real para obtener los detalles del producto con el ID proporcionado
     setTimeout(() => {
-      const mockProduct = {
-        id: id,
-        name: `Producto ${id}`,
-        description: `Descripción del Producto ${id}`,
-        price: Math.floor(Math.random() * 100) + 1
-      };
-      setProduct(mockProduct);
-    }, 1000); // Simular un retardo de 1 segundo para obtener los datos
+      const mockProducts = [
+        { id: 1, name: 'Assassin\'s Creed: Black Flag', description: '¡Únete a la tripulación del Jackdaw en una épica aventura pirata!', price: 20 },
+        { id: 2, name: 'The Witcher 3: Wild Hunt', description: 'Explora el vasto mundo de fantasía lleno de monstruos y misterios.', price: 30 },
+        { id: 3, name: 'Hogwarts Legacy', description: '¡Embárcate en tu propia aventura en el mundo mágico de Harry Potter!', price: 25 }
+      ];
+
+      const selectedProduct = mockProducts.find(product => product.id === parseInt(id));
+      setProduct(selectedProduct);
+    }, 1000);
   }, [id]);
 
   return (
@@ -35,4 +33,3 @@ function ProductDetailContainer({ match }) {
 }
 
 export default ProductDetailContainer;
-    
